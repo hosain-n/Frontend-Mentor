@@ -1,0 +1,139 @@
+// imports
+@import "_Fonts";
+@import "_Colors";
+
+// Reset
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  box-sizing: border-box;
+  font-family: @Montserrat;
+  font-weight: 500;
+  word-wrap: anywhere;
+}
+
+// over write html font size rem
+html {font-size: 10px}
+
+p {font-size: 1.4rem}
+
+body {
+  width: 100vw;
+  min-height: 100vh;
+  background: @Cream;
+  display: grid;
+  place-items: center;
+}
+
+// make images responsive
+picture,
+img {
+  width: 100%;
+  height: auto;
+}
+
+// Card
+
+.Component {
+  max-width: 35rem;
+  background: @White;
+  overflow: hidden;
+  border-radius: 0.8rem;
+  display: flex;
+  flex-direction: column;
+}
+
+.Card__detail {
+  margin: 2.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.Card__Perfume {
+  font-size: 1.55rem;
+  text-transform: uppercase;
+  letter-spacing: 0.4rem;
+  color: @Dark-grayish-blue;
+}
+
+.Card__Title {
+  font-family: @Fraunces;
+  font-weight: 700;
+  font-size: 3rem;
+  line-height: 3.4rem;
+  color: @Very-dark-blue;
+}
+
+.Card__product__detail {
+  color: @Dark-grayish-blue;
+  line-height: 2.5rem;
+}
+
+
+// Price Element
+.Price {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 1rem;
+
+    h1 {
+      color: @Dark-cyan;
+      font-family: @Fraunces;
+      font-weight: 700;
+      font-size: 3.2rem;
+    }
+
+    del {
+      font-size: 1.5rem;
+    }
+
+}
+
+// button
+button {
+  outline: none;
+  border: none;
+  background: @Dark-cyan;
+  color: @White;
+  font-size: 1.7rem;
+  font-weight: 700;
+  padding: 10px;
+  border-radius: 0.5rem;
+
+  img {
+
+  }
+}
+
+button::before {
+  content: "";
+  width: 1rem;
+  height: 1rem;
+  padding: 1rem;
+  margin: 0 1rem 0 0;
+  background: url("../../assets/images/icon-cart.svg") center center no-repeat;
+}
+button:hover {
+  transition: 0.3s;
+  background: @Dark-cyan-hover;
+}
+
+// Desktop Brake point
+@media (min-width: 768px){
+
+  .Component {
+    max-width: 550px;
+    flex-direction: row;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .Card__Picture {
+    display: grid;
+    place-items: center;
+  }
+}

@@ -1,0 +1,126 @@
+@font-face {
+  font-family: 'Fraunces';
+  font-style: normal;
+  font-weight: 700;
+  src: url("../../assets/fonts/Fraunces/Fraunces_9pt_Soft-Bold.ttf");
+}
+@font-face {
+  font-family: 'Montserrat';
+  font-style: normal;
+  font-weight: 500;
+  src: url("../../assets/fonts/Montserrat/Montserrat-Medium.ttf");
+}
+@font-face {
+  font-family: 'Montserrat';
+  font-style: normal;
+  font-weight: 700;
+  src: url("../../assets/fonts/Montserrat/Montserrat-Bold.ttf");
+}
+*,
+*::before,
+*::after {
+  margin: 0;
+  box-sizing: border-box;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 500;
+  word-wrap: anywhere;
+}
+html {
+  font-size: 10px;
+}
+p {
+  font-size: 1.4rem;
+}
+body {
+  width: 100vw;
+  min-height: 100vh;
+  background: hsl(30, 38%, 92%);
+  display: grid;
+  place-items: center;
+}
+picture,
+img {
+  width: 100%;
+  height: auto;
+}
+.Component {
+  max-width: 35rem;
+  background: hsl(0, 0%, 100%);
+  overflow: hidden;
+  border-radius: 0.8rem;
+  display: flex;
+  flex-direction: column;
+}
+.Card__detail {
+  margin: 2.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+.Card__Perfume {
+  font-size: 1.55rem;
+  text-transform: uppercase;
+  letter-spacing: 0.4rem;
+  color: hsl(228, 12%, 48%);
+}
+.Card__Title {
+  font-family: 'Fraunces', serif;
+  font-weight: 700;
+  font-size: 3rem;
+  line-height: 3.4rem;
+  color: hsl(212, 21%, 14%);
+}
+.Card__product__detail {
+  color: hsl(228, 12%, 48%);
+  line-height: 2.5rem;
+}
+.Price {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 1rem;
+}
+.Price h1 {
+  color: hsl(158, 36%, 37%);
+  font-family: 'Fraunces', serif;
+  font-weight: 700;
+  font-size: 3.2rem;
+}
+.Price del {
+  font-size: 1.5rem;
+}
+button {
+  outline: none;
+  border: none;
+  background: hsl(158, 36%, 37%);
+  color: hsl(0, 0%, 100%);
+  font-size: 1.7rem;
+  font-weight: 700;
+  padding: 10px;
+  border-radius: 0.5rem;
+}
+button::before {
+  content: "";
+  width: 1rem;
+  height: 1rem;
+  padding: 1rem;
+  margin: 0 1rem 0 0;
+  background: url("../../assets/images/icon-cart.svg") center center no-repeat;
+}
+button:hover {
+  transition: 0.3s;
+  background: hsl(158, 36%, 17%);
+}
+@media (min-width: 768px) {
+  .Component {
+    max-width: 550px;
+    flex-direction: row;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+  .Card__Picture {
+    display: grid;
+    place-items: center;
+  }
+}
+/*# sourceMappingURL=style.css.map */
