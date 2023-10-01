@@ -1,0 +1,192 @@
+// import
+
+@import "_Fonts";
+@import "_Colors";
+@import "_Mixins";
+
+// Reset
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  word-wrap: anywhere;
+  font-family: @Hanken-Grotesk;
+  font-weight: 500;
+}
+
+html {font-size: 10px}
+
+body {
+  width: 100vw;
+  min-height: 100vh;
+}
+
+// Presets
+
+p {
+  font-size: 1.8rem;
+}
+
+// Component
+
+.Component {
+  width: 100%;
+}
+
+@media (min-width: 400px) {
+  body {
+    display: grid;
+    place-items: center;
+  }
+
+  .Component {
+    overflow: hidden;
+    max-width: 50rem;
+    height: 33rem;
+    display: flex;
+    border-radius: 3rem;
+    box-shadow: @Dark-gray-blue 1px 1px 5px;
+
+    .Card__Result {
+      border-radius: 3rem;
+      flex: 1;
+    }
+
+    .Card__Summary {
+      flex: 1;
+
+      .Summary__list {
+        gap: 2rem;
+      }
+    }
+  }
+}
+
+.Card__Result {
+  color: @White;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  padding: 2rem 4rem;
+  background: linear-gradient(
+    @Light-slate-blue-background, @Light-royal-blue-background
+  );
+  border-radius: 0 0 3rem 3rem;
+
+    p {
+      font-weight: 700;
+      color: @Pale-blue;
+      font-size: 1.3rem;
+    }
+
+    .Card__Result_hundred {
+      background: linear-gradient(@Violet-blue-circle, @Persian-blue-circle);
+      width: 10rem;
+      height: 10rem;
+      border-radius: 50%;
+      display: grid;
+      place-items: center;
+      margin: 1rem 0;
+
+      div {
+        .User__Score {
+          font-weight: 800;
+          font-size: 4rem;
+        }
+
+        .Max__score {
+          font-size: 1.1rem;
+          color: @Pale-blue;
+        }
+      }
+    }
+
+    h2 {
+      font-weight: 800;
+      font-size: 2rem;
+      color: white;
+    }
+}
+
+.Card__Summary {
+  padding: 2rem 3rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+
+  h2 {
+    font-size: 1.3rem;
+    font-weight: 700;
+  }
+
+  .Summary__list {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    padding: 0;
+
+    li {
+      padding: 0.7rem;
+      border-radius: 0.6rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+
+      .Title {
+        display: flex;
+        align-items: center;
+        gap: 0.5rem;
+
+        p {
+          display: inline;
+          font-size: 1.3rem;
+        }
+      }
+
+    }
+  }
+
+  button {
+    outline: none;
+    border: none;
+    border-radius: 2rem;
+    color: @White;
+    font-size: 1.6rem;
+    font-weight: 800;
+    background: @Dark-gray-blue;
+    padding: 1rem;
+  }
+
+  button:hover{
+    transition: 0.3s;
+    background: linear-gradient(
+            @Light-slate-blue-background, @Light-royal-blue-background
+    );
+  }
+}
+
+.Reaction {.Color(@Light-red)}
+
+.Memory {.Color(@Orange-yellow)}
+
+.Verbal {.Color(@Green-teal)}
+
+.Visual {.Color(@Cobalt-blue)}
+
+.List__User__Score {
+  color: @Light-lavender;
+  font-weight: 800;
+  font-size: 1rem;
+
+  span {
+    color: @Dark-gray-blue;
+    font-weight: 800;
+    font-size: 1.3rem;
+  }
+}
