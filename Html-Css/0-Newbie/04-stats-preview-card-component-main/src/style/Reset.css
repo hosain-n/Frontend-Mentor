@@ -1,0 +1,24 @@
+*,
+*::before,
+*::after {
+  margin: 0;
+  box-sizing: border-box;
+}
+body {
+  width: 100vw;
+  min-height: 100vh;
+  overflow: auto;
+}
+html {
+  font-size: 10px;
+}
+picture,
+img {
+  width: 100%;
+  height: 100%;
+}
+button {
+  border: none;
+  outline: none;
+}
+/*# sourceMappingURL=Reset.css.map */

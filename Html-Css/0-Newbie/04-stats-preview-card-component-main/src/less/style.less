@@ -1,0 +1,84 @@
+@import "_Fonts";
+@import "_Colors";
+
+// Body styles
+
+body {
+  background: @cls-main-bg-Very-dark-blue;
+
+  display: grid;
+  place-items: center;
+}
+
+// Card styles
+
+.Component {
+  background: @cls-card-bg-Dark-desaturated-blue;
+  max-width: 27rem;
+  border-radius: 0.7rem;
+  overflow: hidden;
+
+  display: flex;
+  flex-direction: column;
+}
+
+// accent
+
+.Picture {
+  position: relative;
+  overflow: hidden;
+  height: auto;
+}
+
+.Picture::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 100%;
+  height: 100%;
+  background: @cls-accent-Soft-violet;
+  opacity: 0.3;
+  z-index: 999;
+}
+
+.details {
+  display: flex;
+  flex-direction: column;
+  gap: 1.7rem;
+  padding: 3rem;
+
+  text-align: center;
+  font-family: @ff-Inter;
+  color: @cls-White;
+
+  h1 {
+    font-weight: @fw-Bold;
+  }
+
+  p {
+    font-family: @ff-Lexand-Deca;
+    font-weight: @fw-Bold;
+    color: @cls-Slightly-main-paragraph;
+    line-height: 2.2rem;
+  }
+}
+
+.accent {
+  color: @cls-accent-Soft-violet;
+}
+
+
+.Flex__flow {
+  display: flex;
+  flex-direction: column;
+  gap:  2rem;
+}
+
+.flow__item {
+  p {
+    text-transform: uppercase;
+    color: @cls-Slightly-stat-headings;
+    font-weight: @fw-regular;
+  }
+}

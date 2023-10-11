@@ -1,0 +1,76 @@
+@font-face {
+  font-family: "Lexend Deca";
+  font-weight: 400;
+  src: url("../../assets/fonts/Lexend-Deca/LexendDeca-Regular.ttf");
+}
+@font-face {
+  font-family: "Inter";
+  font-weight: 700;
+  src: url("../../assets/fonts/Inter/Inter-Bold.ttf");
+}
+@font-face {
+  font-family: "Inter";
+  font-weight: 400;
+  src: url("../../assets/fonts/Inter/Inter-Regular.ttf");
+}
+body {
+  background: hsl(233, 47%, 7%);
+  display: grid;
+  place-items: center;
+}
+.Component {
+  background: hsl(244, 38%, 16%);
+  max-width: 27rem;
+  border-radius: 0.7rem;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+}
+.Picture {
+  position: relative;
+  overflow: hidden;
+  height: auto;
+}
+.Picture::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 100%;
+  height: 100%;
+  background: hsl(277, 64%, 61%);
+  opacity: 0.3;
+  z-index: 999;
+}
+.details {
+  display: flex;
+  flex-direction: column;
+  gap: 1.7rem;
+  padding: 3rem;
+  text-align: center;
+  font-family: 'Inter', sans-serif;
+  color: hsl(0, 0%, 100%);
+}
+.details h1 {
+  font-weight: 700;
+}
+.details p {
+  font-family: 'Lexend Deca', sans-serif;
+  font-weight: 700;
+  color: hsla(0, 0%, 100%, 0.75);
+  line-height: 2.2rem;
+}
+.accent {
+  color: hsl(277, 64%, 61%);
+}
+.Flex__flow {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+.flow__item p {
+  text-transform: uppercase;
+  color: hsla(0, 0%, 100%, 0.6);
+  font-weight: 400;
+}
+/*# sourceMappingURL=style.css.map */
