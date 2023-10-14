@@ -53,6 +53,7 @@ body {
 }
 .details h1 {
   font-weight: 700;
+  font-size: 2.2rem;
 }
 .details p {
   font-family: 'Lexend Deca', sans-serif;
@@ -63,6 +64,10 @@ body {
 .accent {
   color: hsl(277, 64%, 61%);
 }
+.paragraph {
+  font-family: 'Lexend Deca', sans-serif;
+  font-weight: 400;
+}
 .Flex__flow {
   display: flex;
   flex-direction: column;
@@ -71,6 +76,8 @@ body {
 .flow__item p {
   text-transform: uppercase;
   color: hsla(0, 0%, 100%, 0.6);
+  font-family: 'Lexend Deca', sans-serif;
   font-weight: 400;
+  font-size: 1.1rem;
 }
 /*# sourceMappingURL=style.css.map */

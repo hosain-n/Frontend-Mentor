@@ -12,6 +12,9 @@ body {
 html {
   font-size: 10px;
 }
+p {
+  font-size: 1.3rem;
+}
 picture,
 img {
   width: 100%;
