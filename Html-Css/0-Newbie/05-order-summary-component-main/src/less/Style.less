@@ -1,0 +1,144 @@
+@import "_Fonts";
+@import "_Reset";
+@import "_Colors";
+
+// append font family to all tags
+* {
+    font-family: @ff-Red-hat-display;
+}
+
+// Body background
+body {
+    background: @cls-Pale-blue url("./../assets/img/pattern-background-desktop.svg") no-repeat;
+    background-size: contain;
+}
+
+@media (max-width: 375px) {
+    body{
+        background: @cls-Pale-blue url("./../assets/img/pattern-background-mobile.svg") no-repeat;
+
+    }
+}
+
+// main
+main {
+    display: grid;
+    place-items: center;
+}
+
+// component
+
+.Component {
+    max-width: 35rem;
+    border-radius: 1.3rem;
+    overflow: hidden;
+    background: @cls-Very-pale-blue;
+
+    // Shadow
+    box-shadow: #ddd 10px 5px 10px;
+
+    // Details Part
+    .Details {
+        display: flex; flex-direction: column;
+        gap: 1.5rem;
+        text-align: center;
+        padding: 3rem 3rem;
+
+        // Title
+        .Details__Title {
+            color: @cls-Dark-blue;
+            font-weight: @fw-Black;
+        }
+
+        // Paragraph
+        .Details__paragraph {
+            font-weight: @fw-medium;
+            line-height: 2.5rem;
+            padding: 0 1.8rem;
+        }
+
+    }
+}
+
+.plan {
+    background: darken(@cls-Very-pale-blue, 2%);
+    border-radius: 1.7rem;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0.8rem  1.5rem 0.8rem 1.3rem;
+    margin: 1rem 0;
+
+    .Music__image {
+        width: 50px;
+        height: 50px;
+    }
+
+    div {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        padding: 0 0 0 1rem;
+
+        .plan__Details {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+
+            .Plan__name {
+                font-weight: @fw-Bold;
+                font-size: 1.5rem;
+                color: @cls-Dark-blue;
+            }
+
+            .Plan__price {
+                font-size: 1.5rem;
+                font-weight: @fw-medium;
+            }
+        }
+    }
+
+    a {
+        font-weight: @fw-Bold;
+        font-size: 1.3rem;
+        color: @cls-Bright-blue;
+    }
+
+    a:hover {
+        text-decoration: none;
+    }
+
+}
+
+@media (max-width: 300px) {
+    .plan{
+        flex-direction: column;
+    }
+}
+
+.Pay__payment,
+.Cancel__order {
+    padding: 1rem;
+    border-radius: 1rem;
+    font-weight: @fw-Bold;
+}
+
+.Pay__payment {
+    background: @cls-Bright-blue;
+    color: white;
+}
+
+.Pay__payment:hover {
+    transition: 0.3s;
+    background: @cls-Desaturated-blue;
+}
+
+.Cancel__order {
+    color: @cls-Bright-blue;
+    background: none;
+}
+
+.Cancel__order {
+    color: @cls-Dark-blue;
+}

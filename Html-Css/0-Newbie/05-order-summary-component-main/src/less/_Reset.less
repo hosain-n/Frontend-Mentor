@@ -1,0 +1,51 @@
+@import "_Colors";
+// Resets
+*,
+*::before,
+*::after {
+    margin: 0;
+    word-wrap: anywhere;
+}
+
+// body
+body {
+    max-width: 100vw;
+    min-height: 100vh;
+}
+
+// main
+main {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+}
+
+// over write rem
+html {
+    font-size: 10px
+}
+
+// Paragraphs
+p {
+    color: @cls-Desaturated-blue;
+    font-size: 1.6rem;
+}
+
+// make images responsive
+img,
+picture {
+    width: 100%;
+    height: auto;
+}
+
+// Remove Buttons border and outline
+button {
+    border: none;
+    outline: none;
+}
+
+// hover
+a,
+button {
+    cursor: pointer;
+}

@@ -1,0 +1,160 @@
+@font-face {
+  font-family: 'Red Hat Display';
+  font-style: normal;
+  font-weight: 500;
+  src: url("../assets/fonts/RedHatDisplay-Medium.ttf");
+}
+@font-face {
+  font-family: 'Red Hat Display';
+  font-style: normal;
+  font-weight: 700;
+  src: url("../assets/fonts/RedHatDisplay-Bold.ttf");
+}
+@font-face {
+  font-family: 'Red Hat Display';
+  font-style: normal;
+  font-weight: 900;
+  src: url("../assets/fonts/RedHatDisplay-Black.ttf");
+}
+*,
+*::before,
+*::after {
+  margin: 0;
+  word-wrap: anywhere;
+}
+body {
+  max-width: 100vw;
+  min-height: 100vh;
+}
+main {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+}
+html {
+  font-size: 10px;
+}
+p {
+  color: hsl(224, 23%, 55%);
+  font-size: 1.6rem;
+}
+img,
+picture {
+  width: 100%;
+  height: auto;
+}
+button {
+  border: none;
+  outline: none;
+}
+a,
+button {
+  cursor: pointer;
+}
+* {
+  font-family: 'Red Hat Display', sans-serif;
+}
+body {
+  background: hsl(225, 100%, 94%) url("../assets/img/pattern-background-desktop.svg") no-repeat;
+  background-size: contain;
+}
+@media (max-width: 375px) {
+  body {
+    background: hsl(225, 100%, 94%) url("../assets/img/pattern-background-mobile.svg") no-repeat;
+  }
+}
+main {
+  display: grid;
+  place-items: center;
+}
+.Component {
+  max-width: 35rem;
+  border-radius: 1.3rem;
+  overflow: hidden;
+  background: hsl(225, 100%, 98%);
+  box-shadow: #ddd 10px 5px 10px;
+}
+.Component .Details {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  text-align: center;
+  padding: 3rem 3rem;
+}
+.Component .Details .Details__Title {
+  color: hsl(223, 47%, 23%);
+  font-weight: 900;
+}
+.Component .Details .Details__paragraph {
+  font-weight: 500;
+  line-height: 2.5rem;
+  padding: 0 1.8rem;
+}
+.plan {
+  background: hsl(225, 100%, 96%);
+  border-radius: 1.7rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0.8rem 1.5rem 0.8rem 1.3rem;
+  margin: 1rem 0;
+}
+.plan .Music__image {
+  width: 50px;
+  height: 50px;
+}
+.plan div {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding: 0 0 0 1rem;
+}
+.plan div .plan__Details {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.plan div .plan__Details .Plan__name {
+  font-weight: 700;
+  font-size: 1.5rem;
+  color: hsl(223, 47%, 23%);
+}
+.plan div .plan__Details .Plan__price {
+  font-size: 1.5rem;
+  font-weight: 500;
+}
+.plan a {
+  font-weight: 700;
+  font-size: 1.3rem;
+  color: hsl(245, 75%, 52%);
+}
+.plan a:hover {
+  text-decoration: none;
+}
+@media (max-width: 300px) {
+  .plan {
+    flex-direction: column;
+  }
+}
+.Pay__payment,
+.Cancel__order {
+  padding: 1rem;
+  border-radius: 1rem;
+  font-weight: 700;
+}
+.Pay__payment {
+  background: hsl(245, 75%, 52%);
+  color: white;
+}
+.Pay__payment:hover {
+  transition: 0.3s;
+  background: hsl(224, 23%, 55%);
+}
+.Cancel__order {
+  color: hsl(245, 75%, 52%);
+  background: none;
+}
+.Cancel__order {
+  color: hsl(223, 47%, 23%);
+}
+/*# sourceMappingURL=Style.css.map */
